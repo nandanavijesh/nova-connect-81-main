@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication Flow Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .test-section { margin-bottom: 30px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
+        .test-pass { color: green; font-weight: bold; }
+        .test-fail { color: red; font-weight: bold; }
+        .test-info { color: blue; }
+        ul { padding-left: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Alpha Nova Authentication Flow Test</h1>
+    
+    <div class="test-section">
+        <h2>✅ Implementation Summary</h2>
+        <p><strong>Status:</strong> <span class="test-pass">COMPLETED</span></p>
+        
+        <h3>Changes Made:</h3>
+        <ul>
+            <li><strong>Removed hardcoded credentials:</strong> Eliminated the demo student/HR accounts from the login page</li>
+            <li><strong>Created registration system:</strong> Added a complete registration flow with email, password, and role selection</li>
+            <li><strong>Updated authentication:</strong> Modified auth context to support registration and persistent storage</li>
+            <li><strong>Improved login flow:</strong> Simplified login to use email/password only, with automatic role-based redirection</li>
+            <li><strong>Added routing:</strong> Created registration route and updated navigation</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>📋 New User Flow</h2>
+        <ol>
+            <li>User visits the website</li>
+            <li>They see a clean login page with email/password fields</li>
+            <li>They can click "Register here" to create a new account</li>
+            <li>During registration, they choose their role (Student or HR Recruiter)</li>
+            <li>After registration, they log in with their email and password</li>
+            <li>They are automatically redirected to their respective dashboard</li>
+        </ol>
+    </div>
+
+    <div class="test-section">
+        <h2>✨ Resume Upload Feature</h2>
+        <h3>New Resume Requirements:</h3>
+        <ul>
+            <li><strong>Student Resume Requirement:</strong> Students must upload a resume to access the student dashboard</li>
+            <li><strong>Resume Upload:</strong> Students can upload PDF, DOC, or DOCX files (max 5MB)</li>
+            <li><strong>Resume Builder:</strong> Students can create resumes using the built-in resume builder</li>
+            <li><strong>Automatic Redirection:</strong> After resume upload, students are automatically redirected to their dashboard</li>
+            <li><strong>HR Access:</strong> HR users can access their dashboard without resume requirements</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>📋 Updated User Flow for Students</h2>
+        <ol>
+            <li>User registers as a Student</li>
+            <li>User logs in with email and password</li>
+            <li>System checks if student has uploaded a resume</li>
+            <li>If no resume: User sees resume requirement page with options to:
+                <ul>
+                    <li>Upload existing resume</li>
+                    <li>Create new resume using resume builder</li>
+                </ul>
+            </li>
+            <li>After resume upload: User is automatically redirected to student dashboard</li>
+            <li>If resume already exists: User goes directly to student dashboard</li>
+        </ol>
+    </div>
+
+    <div class="test-section">
+        <h2>⚠️ Notes</h2>
+        <p class="test-info">For demo purposes, password validation is simplified. In a production environment, you would want to:</p>
+        <ul>
+            <li>Hash passwords before storing</li>
+            <li>Add password strength requirements</li>
+            <li>Implement email verification</li>
+            <li>Add proper error handling and validation</li>
+            <li>Implement actual file upload to server storage</li>
+            <li>Add resume file validation and virus scanning</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>🚀 How to Test</h2>
+        <p>1. Open <a href="http://localhost:8081" target="_blank">http://localhost:8081</a></p>
+        <p>2. Click "Register here" to create a new account</p>
+        <p>3. Fill in the registration form with your details</p>
+        <p>4. Choose your role (Student or HR Recruiter)</p>
+        <p>5. Complete registration and you'll be redirected to login</p>
+        <p>6. Log in with your email and password</p>
+        <p>7. You'll be automatically redirected to your dashboard</p>
+    </div>
+
+    <div class="test-section">
+        <h2>✨ Key Features</h2>
+        <ul>
+            <li><strong>User Registration:</strong> New users can create accounts with email, password, and role</li>
+            <li><strong>Role-Based Access:</strong> Users are automatically directed to appropriate dashboards</li>
+            <li><strong>Persistent Login:</strong> User sessions are saved in localStorage</li>
+            <li><strong>Unique Email Validation:</strong> Prevents duplicate account creation</li>
+            <li><strong>Clean UI:</strong> Removed hardcoded demo credentials for a professional appearance</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>✨ Resume Upload Feature</h2>
+        <h3>New Resume Requirements:</h3>
+        <ul>
+            <li><strong>Student Resume Requirement:</strong> Students must upload a resume to access the student dashboard</li>
+            <li><strong>Resume Upload:</strong> Students can upload PDF, DOC, or DOCX files (max 5MB)</li>
+            <li><strong>Resume Builder:</strong> Students can create resumes using the built-in resume builder</li>
+            <li><strong>Automatic Redirection:</strong> After resume upload, students are automatically redirected to their dashboard</li>
+            <li><strong>HR Access:</strong> HR users can access their dashboard without resume requirements</li>
+        </ul>
+    </div>
+
+
+    <div class="test-section">
+        <h2>📋 Updated User Flow for Students</h2>
+        <ol>
+            <li>User registers as a Student</li>
+            <li>User logs in with email and password</li>
+            <li>System checks if student has uploaded a resume</li>
+            <li>If no resume: User sees resume requirement page with options to:
+                <ul>
+                    <li>Upload existing resume</li>
+                    <li>Create new resume using resume builder</li>
+                </ul>
+            </li>
+            <li>After resume upload: User is automatically redirected to student dashboard</li>
+            <li>If resume already exists: User goes directly to student dashboard</li>
+        </ol>
+    </div>
+
+    <
