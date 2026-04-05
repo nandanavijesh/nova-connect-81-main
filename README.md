@@ -45,5 +45,6 @@ The app will be available at http://localhost:5173.
 
 👥 Contributors
 Nandana Vijesh - Information Science & Engineering Student
+Ruchitha.H.J - Computer Science & Engineering Student https://github.com/Ruchitha89
 
 Team Alpha Nova
